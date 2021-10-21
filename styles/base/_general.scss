@@ -1,0 +1,54 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-family: $primary-font;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 55%;
+
+    @include responsive(phone-lg) {
+        font-size: 50%;
+    }
+
+    @include responsive(tablet-md) {
+        font-size: 60%;
+    }
+
+    @include responsive(tablet-lg) {
+        font-size: 80%;
+    }
+
+    @include responsive(desktop) {
+        font-size: 100%;
+    }
+}
+
+.home {
+    width: 100vw;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: scale(1.01) translateY(1px);
+    }
+}

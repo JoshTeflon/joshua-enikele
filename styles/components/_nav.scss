@@ -1,0 +1,39 @@
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+    .nav_content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        @extend %flex-space-between;
+
+        .logo {
+            width: 2.5rem;
+        }
+    }
+}
+
+
+.nav_icon {
+    display: flex;
+    justify-content: space-between;
+    width: 2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    .bar {
+        height: 2rem;
+        border-right: 2px solid $secondary-color;
+
+        &:nth-child(2) {
+            height: 1.5rem;
+        }
+    }
+}

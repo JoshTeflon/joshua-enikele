@@ -1,0 +1,40 @@
+//Theme Colors
+$dark-bg: #0A0016;
+$light-bg: #F2D8FF;
+
+$black: #000000;
+$white: #FFFFFF;
+$secondary-text: #797575;
+
+$primary-color: #B384EC;
+$secondary-color: #f90053;
+
+$border-color: #532EB9;
+
+//Fonts
+$primary-font: 'Circular Std', sans-serif;
+$secondary-font: 'Circular Book', sans-serif;
+$tertiary-font: 'Authentic', 'Circular Book', sans-serif;
+
+
+%content-width {
+    width: 80%;
+    margin: 0 auto;
+}
+
+%plain-btn-hover {
+    box-shadow: 0px 12px 13px -12px $secondary-text;
+    transform: translateY(-1px);
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

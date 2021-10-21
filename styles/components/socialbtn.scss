@@ -1,0 +1,51 @@
+.social-btn {
+    display: flex;
+    margin: 1rem 0;
+    position: absolute;
+    bottom: -4rem;
+    left: -0.5rem;
+
+    button {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        margin: 0 0.2rem;
+        border: 1px solid rgba(249, 0, 83, 0.15);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border-radius: 100%;
+
+       &::before {
+            content: "";
+            
+       }
+    }
+}
+
+.light {
+    .social-btn {
+        button {
+            background: rgba( 0, 0, 0, 0.05 );
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+.dark {
+    .social-btn {
+        button {
+            background: rgba( 255, 255, 255, 0.05 );
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+.no-social-btn {
+    display: none;
+}
