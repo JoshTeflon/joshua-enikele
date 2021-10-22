@@ -1,11 +1,13 @@
 .social-btn {
-    display: flex;
+    @extend %flex-center;
     margin: 1rem 0;
     position: absolute;
     bottom: -4rem;
-    left: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     button {
+        @extend %flex-center;
         width: 2rem;
         height: 2rem;
         padding: 0.5rem;

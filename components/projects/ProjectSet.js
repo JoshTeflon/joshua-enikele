@@ -3,13 +3,17 @@ import Image from 'next/image'
 const ProjectSet = (props) => {
     return (
         <div className="project-set">
-            <div>
-                <div><Image src={props.image} alt="project view" /></div>
-                <span>{props.stack}</span>
+            <div className="project-set__card">
+                <div className="project-set__card__content">
+                    <div className="project-set__card__content__img">
+                        <Image src={props.imgSrc} alt="project view" />
+                    </div>
+                </div>
+                <p className="project-set__card__stack">{props.projectStack}</p>
             </div>
-            <div>
-                <h1>{props.project_name}</h1>
-                <p>{props.project_desc}</p>
+            <div className="project-set__desc">
+                <h1 className="project-set__desc__name">{props.projectName}🔗</h1>
+                <p className="project-set__desc__desc-text">{props.projectDesc}</p>
             </div>
         </div>
     )

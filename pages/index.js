@@ -5,6 +5,9 @@ import Nav from '../components/Nav'
 import Landing from '../components/landing_page/Landing'
 import Projects from '../components/projects/Projects'
 
+import bgLogoDark from '../assets/svg/logo-bg-dark.svg'
+import bgLogoLight from '../assets/svg/logo-bg-light.svg'
+
 export default function Home() {
 	const [theme, setTheme] = useState(true);
 
@@ -22,7 +25,7 @@ export default function Home() {
 			<Nav clickFunction={handleTheme} />
 			<main className="main">
 				<Landing bgClass={theme ? 'dark' : 'light'} />
-				{/* <Projects /> */}
+				<Projects bgClass={theme ? 'project-dark' : 'project-light'} bgLogo={theme ? bgLogoDark : bgLogoLight } />
 			</main>
 		</div>
 	)

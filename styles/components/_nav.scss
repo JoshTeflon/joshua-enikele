@@ -10,7 +10,11 @@
         @extend %flex-space-between;
 
         .logo {
-            width: 2.5rem;
+            width: 3rem;
+
+            @include responsive(phone-lg) {
+                width: 2.5rem;
+            }
         }
     }
 }
