@@ -54,6 +54,7 @@
     }
 
     &__card {
+        cursor: pointer;
         &:hover{
             animation-name: hoverPop;
             animation-duration: 0.3s;

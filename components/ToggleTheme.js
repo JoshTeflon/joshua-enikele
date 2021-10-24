@@ -1,15 +1,9 @@
 const ToggleTheme = (props) => {
     return (
-        <div className="wrapper">
-  <div className="toggle">
-    <input className="toggle-input" type="checkbox" onClick={props.clickFunction} />
-    <div className="toggle-bg"></div>
-    <div className="toggle-switch">
-      <div className="toggle-switch-figure"></div>
-      <div className="toggle-switch-figureAlt"></div>
-    </div>  
-  </div>
-</div>
+        <div className="switch-toggle">
+                <input className="switch-toggle__input" type="checkbox" id="bluetooth" onClick={props.clickFunction} />
+                <label htmlFor="bluetooth"></label>
+            </div>
     )
 }
 
