@@ -9,6 +9,8 @@ const LandingImage = () => {
                 <Image src={joshImg} alt="picture of joshteflon" />
             </div>
             <div className="img-text">joshua enikele</div>
+            <div className="img-box box1"></div>
+            <div className="img-box box2"></div>
         </div>
     )
 }
