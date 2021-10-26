@@ -34,12 +34,12 @@ const Landing = (props) => {
                             </button>
                             <SocialBtnList style={active ? 'social-btn' : 'no-social-btn'} />
                         </div>
-                        <button className="btn download_btn">
+                        <a href="../../assets/JoshuaEnikeleResume.pdf" download="JoshuaEnikeleResume" className="btn download_btn">
                             <div className="download_btn__text">Download CV</div>
                             <div className="download_btn__icon">
                                 <Image src={download} alt="download icon" />
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div className="desktop__img-section">

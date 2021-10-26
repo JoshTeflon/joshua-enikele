@@ -14,12 +14,12 @@ export const socialIcons = [
     {
        id: 0,
        imgSrc: email,
-       link: 'mailto: jenikele21h@gmail.com',
+       link: 'mailto: jenikele21h@gmail.com?subject=FRONTEND DEVELOPER&body=Hello Joshua Enikele,',
     },
     {
         id: 1,
         imgSrc: linkedin,
-        link: 'https://www.linkedin.com/in/enikele-joshua-bb0097195',
+        link: 'https://linkedin.com/in/enikele-joshua-bb0097195',
     },
     {
         id: 2,
@@ -34,7 +34,7 @@ export const socialIcons = [
     {
         id: 4,
         imgSrc: instagram,
-        link: 'https://www.instagram.com/_joshteflon',
+        link: 'https://instagram.com/_joshteflon',
     },
 ]
 
@@ -45,7 +45,7 @@ export const projectsData = [
        projectStack: 'react | css',
        projectName: 'avuna academy',
        projectsDesc: 'A web based learning application.',
-       projectLink: 'https://www.avunaacademy.com',
+       projectLink: 'https://avunaacademy.com',
     },
     {
         id: 1,
@@ -53,7 +53,7 @@ export const projectsData = [
         projectStack: 'react | css(tailwind)',
         projectName: 'saed web',
         projectsDesc: 'A tech start-up official website',
-        projectLink: 'https://www.saed.dev',
+        projectLink: 'https://saed.dev',
     },
     {
         id: 2,
@@ -61,6 +61,6 @@ export const projectsData = [
         projectStack: 'html | scss | js',
         projectName: 'afrigallery',
         projectsDesc: 'An african image gallery with gsap animations',
-        projectLink: 'https://www.afrigallery.netlify.app',
+        projectLink: 'https://afrigallery.netlify.app/',
     },
 ]

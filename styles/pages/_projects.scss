@@ -65,10 +65,10 @@
             position: relative;
             width: 26.7rem;
             height: 15rem;
-            margin-left: 1rem;
+            margin-left: 0;
 
             @include responsive(phone-lg) {
-                margin-left: 0;
+                margin-left: 1rem;
             }
 
             &::before, &::after {
