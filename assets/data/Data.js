@@ -14,7 +14,7 @@ export const socialIcons = [
     {
        id: 0,
        imgSrc: email,
-       link: 'https://github.com/JoshTeflon',
+       link: 'mailto: jenikele21h@gmail.com',
     },
     {
         id: 1,
