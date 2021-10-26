@@ -14,6 +14,13 @@ const Landing = (props) => {
 		setActive(!active)
 	}
 
+    const downloadResume =() => {
+        const Resume = 'https://drive.google.com/file/d/1gVri2INYRUSVbtVy77iyuOcViFHCU_Jc/view?usp=sharing'
+        if (typeof window !== "undefined"){
+          window.location.href = Resume
+        }
+    }
+
     return (
         <section className={`landing ${props.bgClass}`}>
             <div className="landing__content">
@@ -34,12 +41,12 @@ const Landing = (props) => {
                             </button>
                             <SocialBtnList style={active ? 'social-btn' : 'no-social-btn'} />
                         </div>
-                        <a href="../../assets/JoshuaEnikeleResume.pdf" download="JoshuaEnikeleResume" className="btn download_btn">
+                        <button className="btn download_btn" onClick={downloadResume}>
                             <div className="download_btn__text">Download CV</div>
                             <div className="download_btn__icon">
                                 <Image src={download} alt="download icon" />
                             </div>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="desktop__img-section">
