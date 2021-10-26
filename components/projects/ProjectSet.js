@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 
 const ProjectSet = (props) => {
@@ -12,7 +13,7 @@ const ProjectSet = (props) => {
                 <p className="project-set__card__stack">{props.projectStack}</p>
             </div>
             <div className="project-set__desc">
-                <h1 className="project-set__desc__name">{props.projectName}🔗</h1>
+                <Link href={`${props.projectLink}`} passHref><a className="project-set__desc__name">{props.projectName}🔗</a></Link>
                 <p className="project-set__desc__desc-text">{props.projectDesc}</p>
             </div>
         </div>

@@ -6,7 +6,7 @@ const SocialBtnList = (props) => {
         <div className={`${props.style}`}>
             {
                 socialIcons.map(
-                    socialIcon => <SocialBtn key={socialIcon.id} imgSrc={socialIcon.imgSrc} />
+                    socialIcon => <SocialBtn key={socialIcon.id} socialLink={socialIcon.link} imgSrc={socialIcon.imgSrc} />
                 )
             }
         </div>

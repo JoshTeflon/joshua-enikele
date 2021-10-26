@@ -13,23 +13,28 @@ import afrigallery from '../../assets/images/afrigallery.png'
 export const socialIcons = [
     {
        id: 0,
-       imgSrc: email, 
+       imgSrc: email,
+       link: 'https://github.com/JoshTeflon',
     },
     {
         id: 1,
-        imgSrc: linkedin, 
+        imgSrc: linkedin,
+        link: 'https://www.linkedin.com/in/enikele-joshua-bb0097195',
     },
     {
         id: 2,
         imgSrc: github,
+        link: 'https://github.com/JoshTeflon',
     },
     {
         id: 3,
         imgSrc: twitter,
+        link: 'https://twitter.com/jteflon2',
     },
     {
         id: 4,
         imgSrc: instagram,
+        link: 'https://www.instagram.com/_joshteflon',
     },
 ]
 
@@ -40,6 +45,7 @@ export const projectsData = [
        projectStack: 'react | css',
        projectName: 'avuna academy',
        projectsDesc: 'A web based learning application.',
+       projectLink: 'https://www.avunaacademy.com',
     },
     {
         id: 1,
@@ -47,6 +53,7 @@ export const projectsData = [
         projectStack: 'react | css(tailwind)',
         projectName: 'saed web',
         projectsDesc: 'A tech start-up official website',
+        projectLink: 'https://www.saed.dev',
     },
     {
         id: 2,
@@ -54,5 +61,6 @@ export const projectsData = [
         projectStack: 'html | scss | js',
         projectName: 'afrigallery',
         projectsDesc: 'An african image gallery with gsap animations',
+        projectLink: 'https://www.afrigallery.netlify.app',
     },
 ]

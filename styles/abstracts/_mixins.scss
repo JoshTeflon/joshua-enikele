@@ -1,3 +1,16 @@
+//compatibility mixins
+
+@mixin transform($property) {
+	-webkit-transform: $property;
+		-ms-transform: $property;
+			transform: $property;
+}
+
+@mixin transition($property) {
+	-webkit-transition: $property;
+			transition: $property;
+}
+
 //resposive mixins
 
 @mixin responsive($breakpoint) {

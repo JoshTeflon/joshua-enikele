@@ -18,6 +18,7 @@ const Projects = (props) => {
                                 projectStack={projectData.projectStack}
                                 projectName={projectData.projectName}
                                 projectDesc={projectData.projectsDesc}
+                                projectLink={projectData.projectLink}
                                 />
                             )
                         })

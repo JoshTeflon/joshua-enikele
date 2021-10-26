@@ -6,7 +6,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    button {
+    .social-link {
         @extend %flex-center;
         width: 2rem;
         height: 2rem;
@@ -26,7 +26,7 @@
 
 .light {
     .social-btn {
-        button {
+        .social-link {
             background: rgba( 0, 0, 0, 0.05 );
 
             &:hover {
@@ -38,7 +38,7 @@
 
 .dark {
     .social-btn {
-        button {
+        .social-link {
             background: rgba( 255, 255, 255, 0.05 );
 
             &:hover {

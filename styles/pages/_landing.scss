@@ -57,6 +57,11 @@
                 @include responsive(phone-lg) {
                     margin: 0.75rem 0 1.25rem 0;
                 }
+
+                &:hover {
+                    -webkit-animation: jello-horizontal 0.9s both;
+	                animation: jello-horizontal 0.9s both;
+                }
             }
             
             h2 {
@@ -406,10 +411,29 @@
 //Animation
 @keyframes box-animation {
     0%,100% {
-      transform: translateY(-20px);
+      @include transform(translateY(-20px));
     }
     
     50% {
-      transform: translateY(20px);
+        @include transform(translateY(20px))
     }
-  }
+}
+
+@-webkit-keyframes jello-horizontal {
+	0% { @include transform(scale3d(1, 1, 1)); }
+	30% { @include transform(scale3d(1.1, 0.75, 1)); }
+	40% { @include transform(scale3d(0.75, 1.25, 1)); }
+	50% { @include transform(scale3d(1.05, 0.85, 1)); }
+	65% { @include transform(scale3d(0.95, 1.05, 1)); }
+	75% { @include transform(scale3d(1.05, 0.85, 1)); }
+	100% { @include transform(scale3d(1, 1, 1)); }
+}
+@keyframes jello-horizontal {
+	0% { @include transform(scale3d(1, 1, 1)); }
+	30% { @include transform(scale3d(1.1, 0.75, 1)); }
+	40% { @include transform(scale3d(0.75, 1.25, 1)); }
+	50% { @include transform(scale3d(1.05, 0.85, 1)); }
+	65% { @include transform(scale3d(0.95, 1.05, 1)); }
+	75% { @include transform(scale3d(1.05, 0.85, 1)); }
+	100% { @include transform(scale3d(1, 1, 1)); }
+}
