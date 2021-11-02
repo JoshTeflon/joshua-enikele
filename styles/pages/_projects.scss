@@ -1,9 +1,11 @@
 //Project.js Styles
 .projects {
     width: 100%;
+    height: 100%;
     padding: 3rem 0;
     position: relative;
     font-family: $primary-font;
+    scroll-snap-align: start;
 
     @include responsive(phone-lg) {
         padding: 5rem 0;
@@ -56,8 +58,8 @@
     &__card {
         cursor: pointer;
         &:hover{
-            animation-name: hoverPop;
-            animation-duration: 0.3s;
+            // animation-name: hoverPop;
+            // animation-duration: 1s;
         }
 
         &__content {
@@ -78,7 +80,7 @@
                 position: absolute;
                 z-index: -1;
                 border: 2px solid $border-color;
-                transition: all 0.3s ease-out;
+                transition: all 0.5s ease-out;
             }
 
             &::before {
@@ -188,15 +190,15 @@
 }
 
 //Animations
-@keyframes hoverPop {
-    0%, 100% {
-      transform: scale(1);
-    }
-    33% {
-      transform: scale(1.05);
-    }
-    66% {
-      transform: scale(.90);
-    }
-  }
+// @keyframes hoverPop {
+//     0%, 100% {
+//       transform: scale(1);
+//     }
+//     33% {
+//       transform: scale(1.05);
+//     }
+//     66% {
+//       transform: scale(.90);
+//     }
+//   }
   

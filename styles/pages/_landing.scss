@@ -4,6 +4,7 @@
     @extend %flex-center;
     flex-direction: column;
     font-family: $primary-font;
+    scroll-snap-align: start;
 
     @include responsive(phone-lg) {
         height: 50vh;

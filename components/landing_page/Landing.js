@@ -14,13 +14,6 @@ const Landing = (props) => {
 		setActive(!active)
 	}
 
-    const downloadResume =() => {
-        const Resume = 'https://drive.google.com/file/d/1gVri2INYRUSVbtVy77iyuOcViFHCU_Jc/view?usp=sharing'
-        if (typeof window !== "undefined"){
-          window.location.href = Resume
-        }
-    }
-
     return (
         <section className={`landing ${props.bgClass}`}>
             <div className="landing__content">
@@ -29,7 +22,7 @@ const Landing = (props) => {
                     <div className="joshteflon">
                         <Image src={joshteflon} alt="" />
                     </div>
-                    <h2>Front-end Developer💻💯</h2>
+                    <h2>Front-end Developer💻💡</h2>
                     <p className="about">I’m a Front-end Developer based in Nigeria, I build responsive and scalable products with satisfying user experience.</p>
                     <div className="btn-grp">
                         <div className="btn-grp__contact">
@@ -41,12 +34,12 @@ const Landing = (props) => {
                             </button>
                             <SocialBtnList style={active ? 'social-btn' : 'no-social-btn'} />
                         </div>
-                        <button className="btn download_btn" onClick={downloadResume}>
+                        <a className="btn download_btn" href="../../assets/JoshuaEnikeleResume.pdf" target="_blank" download>
                             <div className="download_btn__text">Download CV</div>
                             <div className="download_btn__icon">
                                 <Image src={download} alt="download icon" />
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div className="desktop__img-section">

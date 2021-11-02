@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import Zoom from 'react-reveal/Zoom';
 
 const ProjectSet = (props) => {
     return (
+        <Zoom top>
         <div className="project-set">
             <div className="project-set__card">
                 <div className="project-set__card__content">
@@ -16,6 +18,7 @@ const ProjectSet = (props) => {
                 <p className="project-set__desc__desc-text">{props.projectDesc}</p>
             </div>
         </div>
+        </Zoom>
     )
 }
 
