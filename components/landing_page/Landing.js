@@ -34,7 +34,7 @@ const Landing = (props) => {
                             </button>
                             <SocialBtnList style={active ? 'social-btn' : 'no-social-btn'} />
                         </div>
-                        <a className="btn download_btn" href="../../assets/JoshuaEnikeleResume.pdf" target="_blank" download>
+                        <a className="btn download_btn" href="https://drive.google.com/file/d/1gVri2INYRUSVbtVy77iyuOcViFHCU_Jc/view?usp=sharing" target="_blank" rel="noreferrer">
                             <div className="download_btn__text">Download CV</div>
                             <div className="download_btn__icon">
                                 <Image src={download} alt="download icon" />
