@@ -5,10 +5,13 @@
     padding: 3rem 0;
     position: relative;
     font-family: $primary-font;
-    scroll-snap-align: start;
 
     @include responsive(phone-lg) {
         padding: 5rem 0;
+    }
+
+    @include responsive(desktop) { 
+        scroll-snap-align: start; 
     }
 
     &__content {

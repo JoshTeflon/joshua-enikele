@@ -5,7 +5,10 @@ body {
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     font-family: $primary-font;
-    scroll-snap-type: y proximity;
+
+    @include responsive(desktop) {
+        scroll-snap-type: y proximity;
+    }
 }
 
 * {
