@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/Link'
 
 import Zoom from 'react-reveal/Zoom';
 
@@ -16,16 +17,17 @@ const Footer = (props) => {
                     <a href="mailto: jenikele21h@gmail.com?subject=FRONTEND DEVELOPER&body=Hello Joshua Enikele," target="_blank" rel="noopener noreferrer" className="footer-wrapper__content__btn">
                         Say Hello👋
                     </a>
-                    
                     <SocialBtnList />
                 </div>
             </div>
             </Zoom>
             <div className="footer-note">
                 <div className="footer-note__name">&copy; 2021 joshua enikele</div>
-                <div className="footer-note__logo">
-                    <Image src={props.bgLogo} alt="footer logo" />
-                </div>
+                <Link href="/">
+                    <a className="footer-note__logo">
+                        <Image src={props.bgLogo} alt="footer logo" />
+                    </a>
+                </Link>
             </div>
         </footer>
     )

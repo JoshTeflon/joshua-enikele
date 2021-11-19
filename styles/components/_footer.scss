@@ -28,7 +28,7 @@
             &__talk {
                 font-size: 0.9rem;
                 font-weight: 500;
-                margin: 0.75rem 0;
+                margin: 0.5rem 0;
             }
 
             &__btn {
@@ -59,7 +59,7 @@
     &-note {
         @extend %flex-space-between;
         width: 90%;
-        margin: 1.5rem auto -1rem;
+        margin: 4rem auto -2rem;
         // padding: 2rem 0;
 
         &__name {
