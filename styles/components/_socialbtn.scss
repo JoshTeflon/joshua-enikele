@@ -1,17 +1,13 @@
 .social-btn {
     @extend %flex-center;
     margin: 1rem 0;
-    position: absolute;
-    bottom: -4rem;
-    left: 49%;
-    transform: translateX(-50%);
 
     .social-link {
         @extend %flex-center;
-        width: 2rem;
-        height: 2rem;
-        padding: 0.5rem;
-        margin: 0 0.2rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0.9rem;
+        margin: 0 1rem;
         border: 1px solid rgba(249, 0, 83, 0.15);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
@@ -24,7 +20,7 @@
     }
 }
 
-.light {
+.footer-light {
     .social-btn {
         .social-link {
             background: rgba( 0, 0, 0, 0.05 );
@@ -36,7 +32,7 @@
     }
 }
 
-.dark {
+.footer-dark {
     .social-btn {
         .social-link {
             background: rgba( 255, 255, 255, 0.05 );
@@ -46,8 +42,4 @@
             }
         }
     }
-}
-
-.no-social-btn {
-    display: none;
 }

@@ -389,18 +389,22 @@
 
                     span {
                         color: $secondary-color;
+
+                        &:hover {
+                            color: $dark-bg;
+                        }
                     }
                 }
 
-                .btn-bg-all {
-                    span {
-                        color: $dark-bg;
-                    }
+                // .btn-bg-all {
+                //     span {
+                //         color: $dark-bg;
+                //     }
 
-                    svg {
-                        fill: $dark-bg;
-                    }
-                }
+                //     svg {
+                //         fill: $dark-bg;
+                //     }
+                // }
             }
         }
     }

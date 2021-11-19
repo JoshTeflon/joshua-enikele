@@ -1,0 +1,105 @@
+.footer {
+    // height: 100vh;
+    padding: 3rem 0;
+
+    @include responsive(desktop) { 
+        scroll-snap-align: start; 
+    }
+
+    &-wrapper {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+
+        @include responsive(phone-lg) {
+            width: 80%;
+        }
+
+        &__content {
+            @extend %flex-center;
+            flex-direction: column;
+            padding: 2rem 0;
+
+            &__header {
+                font-size: 3rem;
+                text-transform: capitalize
+            }
+
+            &__talk {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin: 0.75rem 0;
+            }
+
+            &__btn {
+                background: transparent;
+                border: 1px solid $secondary-color;
+                color: $secondary-color;
+                font-size: 0.85rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 9rem;
+                height: 3rem;
+                border-radius: 5px;
+                font-family: 'Circular Std', sans-serif;
+                cursor: pointer;
+                margin: 1rem 0;
+
+                &:hover {
+                    transform: scale(1.01)
+                }
+            }
+        }
+    }
+
+    &-note {
+        @extend %flex-space-between;
+        width: 90%;
+        margin: 1.5rem auto -1rem;
+        // padding: 2rem 0;
+
+        &__name {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+        }
+
+        &__logo {
+            width: 2.5rem;
+        }
+    }
+}
+
+.footer-dark {
+    background: $dark-bg;
+    color: $primary-color;
+
+    .footer-wrapper {
+        background: $black;
+
+        &__content {
+            &__talk {
+                color: $white;
+            }
+        }
+    }
+}
+
+.footer-light {
+    background: $light-bg;
+    color: $dark-bg;
+
+    .footer-wrapper {
+        background: $white;
+
+        &__content {
+            &__talk {
+                color: $black;
+            }
+        }
+    }
+}

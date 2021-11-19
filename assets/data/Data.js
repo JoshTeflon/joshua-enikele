@@ -11,28 +11,32 @@ import saedWeb from '../../assets/images/saed-web.png'
 import afrigallery from '../../assets/images/afrigallery.png'
 
 export const socialIcons = [
+    // {
+    //    id: 0,
+    //    imgSrc: email,
+    //    link: 'mailto: jenikele21h@gmail.com?subject=FRONTEND DEVELOPER&body=Hello Joshua Enikele,',
+    // },
     {
-       id: 0,
-       imgSrc: email,
-       link: 'mailto: jenikele21h@gmail.com?subject=FRONTEND DEVELOPER&body=Hello Joshua Enikele,',
-    },
-    {
-        id: 1,
+        id: 0,
+        name: 'Linkedin',
         imgSrc: linkedin,
         link: 'https://linkedin.com/in/enikele-joshua-bb0097195',
     },
     {
-        id: 2,
+        id: 1,
+        name: 'Github',
         imgSrc: github,
         link: 'https://github.com/JoshTeflon',
     },
     {
-        id: 3,
+        id: 2,
+        name: 'Twitter',
         imgSrc: twitter,
         link: 'https://twitter.com/jteflon2',
     },
     {
-        id: 4,
+        id: 3,
+        name: 'Instagram',
         imgSrc: instagram,
         link: 'https://instagram.com/_joshteflon',
     },

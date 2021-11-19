@@ -3,7 +3,7 @@ import Zoom from 'react-reveal/Zoom';
 
 const ProjectSet = (props) => {
     return (
-        <Zoom top>
+        <Zoom bottom>
         <div className="project-set">
             <div className="project-set__card">
                 <div className="project-set__card__content">
