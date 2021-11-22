@@ -35,7 +35,7 @@
                 background: transparent;
                 border: 1px solid $secondary-color;
                 color: $secondary-color;
-                font-size: 0.85rem;
+                font-size: 0.8rem;
                 font-weight: 300;
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
@@ -48,6 +48,10 @@
                 font-family: 'Circular Std', sans-serif;
                 cursor: pointer;
                 margin: 1rem 0;
+
+                @include responsive(desktop) {
+                    font-size: 0.85rem;
+                }
 
                 &:hover {
                     transform: scale(1.01)
