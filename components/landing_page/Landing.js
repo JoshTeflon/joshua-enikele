@@ -1,24 +1,48 @@
 import Image from 'next/image'
-import Link from 'next/link'
+
+import { motion } from 'framer-motion'
 
 import LandingImage from './LandingImage'
 
 import joshteflon from '../../assets/images/joshteflon.png'
 import download from '../../assets/svg/download.svg'
 
+//Framer Motion
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: { opacity: 1, scale: 1,
+    transition: { delayChildren: 2, staggerChildren: 0.4 }
+    }
+};
+
+const item = {
+    hidden: { y: -20, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+};
+
+const heroImage = {
+    hidden: { y:-20, opacity: 0 },
+    visible: { y:0, opacity: 1,
+    transition: { delay: 1.5 }
+    }
+};
+
+
 const Landing = (props) => {
 
     return (
         <section className={`landing ${props.bgClass}`}>
             <div className="landing__content">
-                <div className="landing__content__hero">
-                    <p className="intro">👋 <span>Hello there, I&apos;m</span></p>
-                    <div className="joshteflon">
+                <motion.div className="landing__content__hero" variants={container} initial="hidden" animate="visible">
+                    <motion.p className="intro" variants={item}>👋 <span>Hello there, I&apos;m</span></motion.p>
+                    <motion.div className="joshteflon" variants={item}>
                         <Image src={joshteflon} alt="" />
-                    </div>
-                    <h2>Front-end Developer</h2>
-                    <p className="about">I’m a Front-end Developer based in Nigeria, I build responsive and scalable products with satisfying user experience.</p>
-                    <div className="btn-grp">
+                    </motion.div>
+                    <motion.h2 variants={item}>Front-end Developer</motion.h2>
+                    <motion.p className="about" variants={item}>
+                        I’m a Front-end Developer based in Nigeria, I build responsive and scalable products with satisfying user experience.
+                    </motion.p>
+                    <motion.div className="btn-grp" variants={item}>
                         <div className="btn-grp__contact">
                             <a href="#footer" className="btn contact_btn">
                                 Let&apos;s <span>Talk</span>
@@ -33,15 +57,15 @@ const Landing = (props) => {
                                 <Image src={download} alt="download icon" />
                             </div>
                         </a>
-                    </div>
-                </div>
-                <div className="desktop__img-section">
+                    </motion.div>
+                </motion.div>
+                <motion.div className="desktop__img-section" variants={heroImage} initial="hidden" animate="visible">
                     <LandingImage />
-                </div>
+                </motion.div>
             </div>
-            <div className="mobile__img-section">
+            <motion.div className="mobile__img-section" variants={heroImage} initial="hidden" animate="visible">
                 <LandingImage />
-            </div>
+            </motion.div>
         </section>
     )
 }

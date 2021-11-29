@@ -169,18 +169,18 @@
                     }
                     
                     .download_btn__icon {
-                        width: 1.35rem;
+                        width: 1.25rem;
                         margin-left: 0.3rem;
                     }
 
                     @include responsive (phone-lg) {
                         .download_btn__icon {
                             opacity: 0;
-                            width: 1.2rem;
+                            width: 1.1rem;
                             position: absolute;
                             right: 5px;
                             transition: 0.5s;
-                            transform: translate(0, -50%);
+                            transform: translate(0);
                             transition: transform 1;
                             margin-left: 0;
                         }

@@ -42,8 +42,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 9rem;
-                height: 3rem;
+                width: 12rem;
+                height: 4rem;
                 border-radius: 5px;
                 font-family: 'Circular Std', sans-serif;
                 cursor: pointer;
@@ -51,6 +51,8 @@
 
                 @include responsive(desktop) {
                     font-size: 0.85rem;
+                    width: 10rem;
+                    height: 3.3rem;
                 }
 
                 &:hover {
