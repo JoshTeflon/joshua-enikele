@@ -16,28 +16,52 @@
                 width: 2.5rem;
             }
         }
-    }
-}
 
+        .nav_items {
+            display: flex;
+            align-items: center;
 
-.nav_icon {
-    display: flex;
-    justify-content: space-between;
-    width: 2rem;
-    border: none;
-    background: transparent;
-    cursor: pointer;
+            // .nav_links {
+            //     display: none;
+            //     align-items: center;
+            //     color: $secondary-color;
+            //     font-size: 0.9rem;
 
-    &:focus {
-        outline: none;
-    }
+            //     @include responsive(tablet-md) {
+            //         display: flex;
+            //     }
 
-    .bar {
-        height: 2rem;
-        border-right: 2px solid $secondary-color;
+            //     &__link {
+            //         margin-left: 2.5rem;
+            //     }
+            // }
 
-        &:nth-child(2) {
-            height: 1.5rem;
+            .nav_icon {
+                display: flex;
+                justify-content: space-between;
+                width: 2rem;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                margin-left: 2rem;
+
+                // @include responsive(tablet-md) {
+                //     display: none;
+                // }
+            
+                &:focus {
+                    outline: none;
+                }
+            
+                .bar {
+                    height: 2rem;
+                    border-right: 2px solid $secondary-color;
+            
+                    &:nth-child(2) {
+                        height: 1.5rem;
+                    }
+                }
+            }
         }
     }
 }

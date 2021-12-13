@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const ProjectSet = (props) => {
     return (
-        <Zoom bottom>
+        <Fade bottom>
         <div className="project-set">
             <div className="project-set__card">
                 <div className="project-set__card__content">
@@ -18,7 +18,7 @@ const ProjectSet = (props) => {
                 <p className="project-set__desc__desc-text">{props.projectDesc}</p>
             </div>
         </div>
-        </Zoom>
+        </Fade>
     )
 }
 

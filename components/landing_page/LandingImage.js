@@ -15,7 +15,7 @@ const LandingImage = () => {
     return (
         <div className="landing__content__img-wrapper">
             <div className="landing__content__img-wrapper__img">
-                <Image src={joshImg} alt="picture of joshteflon" />
+                <Image src={joshImg} alt="picture of joshteflon" priority />
             </div>
             <div className="img-text">joshua enikele</div>
             <motion.div className="img-box box1" variants={name} initial="hidden" animate="visible"></motion.div>

@@ -5,7 +5,7 @@ import ProjectSet from "./ProjectSet";
 
 const Projects = (props) => {
     return (
-        <div className={`projects ${props.bgClass}`}>
+        <div id="projects" className={`projects ${props.bgClass}`}>
             <div className="projects__content">
                 <h1 className="projects__content__head">Projects📁</h1>
                 <section>

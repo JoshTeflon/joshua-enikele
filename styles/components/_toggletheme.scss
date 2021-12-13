@@ -1,4 +1,6 @@
 .switch-toggle {
+    display: flex;
+    align-items: center;
 
     input[type="checkbox"] {
         position: absolute;

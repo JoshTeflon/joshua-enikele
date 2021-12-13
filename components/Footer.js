@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import SocialBtnList from './SocialBtnList'
 
 
 const Footer = (props) => {
     return (
-        <footer id="footer" className={`footer ${props.bgClass}`}>
-            <Zoom bottom>
+        <footer id="contact" className={`footer ${props.bgClass}`}>
+            <Fade bottom>
             <div className="footer-wrapper">
                 <div className="footer-wrapper__content">
                     <h1 className="footer-wrapper__content__header">Get in touch</h1>
@@ -20,7 +20,7 @@ const Footer = (props) => {
                     <SocialBtnList />
                 </div>
             </div>
-            </Zoom>
+            </Fade>
             <div className="footer-note">
                 <div className="footer-note__name">&copy; 2021 joshua enikele</div>
                 <Link href="/">
