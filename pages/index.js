@@ -25,8 +25,8 @@ export default function Home() {
 				<meta name="Joshua Enikele Portfolio" content="Joshua Enikele Portfolio, Frontend Developer, HTML, JavaScript, React, NextJS" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Nav clickFunction={handleTheme} />
 			<main className="main">
+			    <Nav bgClass={theme ? 'nav-dark' : 'nav-light'} clickFunction={handleTheme} />
 				<Landing bgClass={theme ? 'dark' : 'light'} />
 				<Projects bgClass={theme ? 'project-dark' : 'project-light'} bgLogo={theme ? bgLogoDark : bgLogoLight } />
 				<Footer bgClass={theme ? 'footer-dark' : 'footer-light'} bgLogo={theme ? FooterLogoLight : FooterLogoDark } />

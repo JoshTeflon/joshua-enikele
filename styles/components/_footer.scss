@@ -1,6 +1,6 @@
 .footer {
     // height: 100vh;
-    padding: 3rem 0;
+    padding: 8rem 0;
 
     @include responsive(desktop) { 
         scroll-snap-align: start; 
@@ -65,7 +65,7 @@
     &-note {
         @extend %flex-space-between;
         width: 90%;
-        margin: 4rem auto -2rem;
+        margin: 7rem auto -7rem;
         // padding: 2rem 0;
 
         &__name {

@@ -3,10 +3,12 @@
     top: 0;
     width: 100%;
 
-    .nav_content {
+    &_content {
         width: 90%;
         margin: 0 auto;
         padding: 2rem 0;
+        position: relative;
+        z-index: 15;
         @extend %flex-space-between;
 
         .logo {
@@ -43,11 +45,9 @@
                 border: none;
                 background: transparent;
                 cursor: pointer;
-                margin-left: 2rem;
-
-                // @include responsive(tablet-md) {
-                //     display: none;
-                // }
+                // margin-left: 2rem;
+                position: fixed;
+                right: 5%;
             
                 &:focus {
                     outline: none;
@@ -55,13 +55,256 @@
             
                 .bar {
                     height: 2rem;
-                    border-right: 2px solid $secondary-color;
+                    transition: 0.3s ease-in-out;
             
                     &:nth-child(2) {
                         height: 1.5rem;
                     }
                 }
             }
+
+            .nav_open {
+
+                .bar {
+
+                    &:nth-child(1) {
+                        transform: translateX(15px) rotate(-45deg);
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateX(-15px) rotate(45deg);
+                    }
+                }
+            }
+
+            // .nav_close {
+
+            //     .bar {
+            //         border-right: 2px solid $dark-bg;
+            //     }
+            // }
         }
+    }
+
+    &-active {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+
+        &_wrapper {
+            @extend %content-width;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-weight: 300;
+            text-transform: uppercase;
+            // width: 100%;
+            height: 100%;
+
+            @include responsive(phone-lg) {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+            
+            &_content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-bottom: 2rem;
+
+                @include responsive(phone-lg) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_contact {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                .nav-social {
+
+                    &_head {
+                        font-size: 2rem;
+                        font-weight: 500;
+
+                        @include responsive(phone-lg) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    svg {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+
+                    &_mail {
+                        font-size: 3.5rem;
+                        margin: 1rem 0 3rem 0;
+
+                        @include responsive(phone-lg) {
+                            font-size: 1.2rem;
+                        }
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 1rem;
+
+                            &:hover {
+                                letter-spacing: 0.05rem;
+                                transition: 0.3s ease-in-out;
+                            }
+                        }
+
+                        svg {
+                            width: 1.75rem;
+                            margin-left: 0.25rem;
+                        }
+                    }
+
+                    &_list {
+                        display: flex;
+                        margin-top: 1rem;
+                    }
+
+                    &_link {
+                        margin-right: 1rem;
+                        transition: 0.2s ease-in-out;
+
+                        &:hover {
+                            transform: translateY(-1.5px);
+                        }
+
+                        &:active {
+                            transform: scale(1.01);
+                        }
+                    }
+                }
+            }
+    
+            &_link {
+                font-size: 5rem;
+                margin: 1rem 0;
+                transition: 0.3s ease-in-out;
+                position: relative;
+
+                @include responsive(phone-lg) {
+                    font-size: 3.5rem;
+                }
+    
+                &:hover {
+                    letter-spacing: 0.2rem;
+                }
+    
+                &:hover svg{
+                    // display: block;
+                    opacity: 1;
+                    transform: translateX(-0.5rem);
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+    
+                svg {
+                    width: 2rem;
+                    // display: none;
+                    position: absolute;
+                    left: -2rem;
+                    transition: 0.5s;
+                    transform: translate(0);
+                    transition: transform 1;
+                    // margin-left: 0;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &-inactive {
+        display: none;
+    }
+}
+
+
+//Theme styles
+.nav-dark {
+
+    .nav_open {
+        .bar {
+            border-right: 2px solid $dark-bg;
+
+            @include responsive(phone-lg) {
+                border-right: 2px solid $dark-bg;
+            }
+        }
+    }
+
+    .nav_close {
+        .bar {
+            border-right: 2px solid $primary-color;
+
+            @include responsive(phone-lg) {
+                border-right: 2px solid $dark-bg;
+            }
+        }
+    }
+    
+    .nav-active {
+        background: $primary-color;
+
+        &_wrapper {
+            color: $dark-bg;
+
+            svg {
+                fill: $dark-bg;
+            }
+        }
+    }
+}
+
+.nav-light {
+
+    .nav_open {
+        .bar {
+            border-right: 2px solid $light-bg;
+
+            @include responsive(phone-lg) {
+                border-right: 2px solid $light-bg;
+            }
+        }
+    }
+
+    .nav_close {
+        .bar {
+            border-right: 2px solid $dark-bg;
+
+            @include responsive(phone-lg) {
+                border-right: 2px solid $light-bg;
+            }
+        }
+    }
+    
+    .nav-active {
+        background: $dark-bg;
+
+        &_wrapper {
+            color: $light-bg;
+
+            svg {
+                fill: $light-bg;
+            }
+        }     
     }
 }

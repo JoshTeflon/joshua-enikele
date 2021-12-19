@@ -60,10 +60,10 @@
 
     &__card {
         cursor: pointer;
-        &:hover{
+        // &:hover{
             // animation-name: hoverPop;
             // animation-duration: 1s;
-        }
+        // }
 
         &__content {
             background: $border-color;
@@ -130,9 +130,11 @@
         color: $white;
         text-align: center;
         white-space: nowrap;
+        margin-top: 1rem;
 
         @include responsive(phone-lg) {
             width: 40%;
+            margin-top: 0;
         }
 
         &__name {
@@ -155,7 +157,7 @@
     }
 }
 
-//Theme Differences
+//Theme
 .project-light {
     background: $white;
 
