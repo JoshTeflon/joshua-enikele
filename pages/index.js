@@ -26,7 +26,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="main">
-			    <Nav bgClass={theme ? 'nav-dark' : 'nav-light'} clickFunction={handleTheme} />
+			    <Nav bgClass={theme ? 'nav-dark' : 'nav-light'} clickTheme={handleTheme} />
 				<Landing bgClass={theme ? 'dark' : 'light'} />
 				<Projects bgClass={theme ? 'project-dark' : 'project-light'} bgLogo={theme ? bgLogoDark : bgLogoLight } />
 				<Footer bgClass={theme ? 'footer-dark' : 'footer-light'} bgLogo={theme ? FooterLogoLight : FooterLogoDark } />

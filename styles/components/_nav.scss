@@ -68,7 +68,19 @@
                 .bar {
 
                     &:nth-child(1) {
-                        transform: translateX(15px) rotate(-45deg);
+                        transform: translateX(8px) rotate(-45deg);
+
+                        @include responsive(tablet-md) {
+                            transform: translateX(9px) rotate(-45deg);
+                        }
+
+                        @include responsive(tablet-lg) {
+                            transform: translateX(12px) rotate(-45deg);
+                        }
+
+                        @include responsive(desktop) {
+                            transform: translateX(15px) rotate(-45deg);
+                        }
                     }
 
                     &:nth-child(2) {
@@ -76,7 +88,19 @@
                     }
 
                     &:nth-child(3) {
-                        transform: translateX(-15px) rotate(45deg);
+                        transform: translateX(-8px) rotate(45deg);
+
+                        @include responsive(tablet-md) {
+                            transform: translateX(-9px) rotate(45deg);
+                        }
+
+                        @include responsive(tablet-lg) {
+                            transform: translateX(-12px) rotate(45deg);
+                        }
+
+                        @include responsive(desktop) {
+                            transform: translateX(-15px) rotate(45deg);
+                        }
                     }
                 }
             }
@@ -97,6 +121,7 @@
         top: 0;
         bottom: 0;
         z-index: 10;
+        overflow: hidden;
 
         &_wrapper {
             @extend %content-width;
@@ -244,19 +269,21 @@
     .nav_open {
         .bar {
             border-right: 2px solid $dark-bg;
-
-            @include responsive(phone-lg) {
-                border-right: 2px solid $dark-bg;
-            }
         }
     }
 
     .nav_close {
         .bar {
             border-right: 2px solid $primary-color;
+        }
 
-            @include responsive(phone-lg) {
+        @include responsive(phone-lg) {
+            .bar-pri {
                 border-right: 2px solid $dark-bg;
+            }
+
+            .bar-sec {
+                border-right: 2px solid $primary-color;
             }
         }
     }
@@ -279,19 +306,21 @@
     .nav_open {
         .bar {
             border-right: 2px solid $light-bg;
-
-            @include responsive(phone-lg) {
-                border-right: 2px solid $light-bg;
-            }
         }
     }
 
     .nav_close {
         .bar {
             border-right: 2px solid $dark-bg;
+        }
 
-            @include responsive(phone-lg) {
+        @include responsive(phone-lg) {
+            .bar-pri {
                 border-right: 2px solid $light-bg;
+            }
+
+            .bar-sec {
+                border-right: 2px solid $dark-bg;
             }
         }
     }

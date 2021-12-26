@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { motion } from 'framer-motion'
 
@@ -18,7 +18,8 @@ const nav = {
 };
 
 const Nav = (props) => {
-    const [ navState, setNavState] = useState(false)
+    const [ navState, setNavState] = useState(false);
+    const [ navIconState, setNavIconState] = useState(false);
 
     const handleNavState = () => {
         setNavState(!navState)
@@ -34,7 +35,18 @@ const Nav = (props) => {
         document.body.style.overflowY = "scroll"
     }
 
-    // console.log(navState)
+    useEffect(() => {
+        const handleScroll = () => {
+            window.scrollY > 650 ? setNavIconState(true) : setNavIconState(false)
+        }
+    
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+            window.removeEventListener("scroll", () => handleScroll)
+        }
+        }, [])
+
+    console.log(navIconState)
 
     return (
         <nav className={`nav ${props.bgClass}`}>
@@ -45,7 +57,7 @@ const Nav = (props) => {
                     </a>
                 </Link>
                 <div className="nav_items">
-                <ToggleTheme clickFunction={props.clickFunction} />
+                    <ToggleTheme clickTheme={props.clickTheme} />
                     {/* <ul className="nav_links">
                         <li className="nav_links__link"><a href="#home">Home</a></li>
                         <li className="nav_links__link"><a href="#about">About</a></li>
@@ -53,9 +65,9 @@ const Nav = (props) => {
                         <li className="nav_links__link"><a href="#contact">Contact</a></li>
                     </ul> */}
                     <button className={`nav_icon ${navState ? "nav_open" : "nav_close"}`} onClick={handleNavState}>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
+                        <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
+                        <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
+                        <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
                     </button>
                 </div>
             </motion.div>
