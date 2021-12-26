@@ -125,7 +125,7 @@
                     color: $light-bg;
                     background: linear-gradient(90deg, $secondary-color 45%, transparent 55%);
                     border: none;
-                    transition: background-color 0.3s linear;
+                    transition: background-color 0.5s ease-in-out;
 
                     span {
                         margin-left: 0.5rem;
@@ -144,7 +144,7 @@
                     }
 
                     &:hover {
-                        background: linear-gradient(90deg, $secondary-color 45%, $secondary-color 55%);
+                        background-color: $secondary-color;
                     }
 
                     &:hover svg {
