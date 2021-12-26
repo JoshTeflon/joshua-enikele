@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import { useState, useEffect } from 'react'
 
 import { motion } from 'framer-motion'
@@ -54,10 +55,10 @@ const Nav = (props) => {
 
     return (
         <nav className={`nav ${props.bgClass}`}>
-            <motion.div className="nav_content" variants={nav} initial="hidden" animate="visible">
+            <div className="nav_content">
                 <Link href="/">
                     <a className="logo">
-                        <Image src={Logo} alt="Logo" />
+                        <motion.div variants={nav} initial="hidden" animate="visible"><Image src={Logo} alt="Logo" /></motion.div>
                     </a>
                 </Link>
                 <div className="nav_items">
@@ -70,11 +71,11 @@ const Nav = (props) => {
                     </ul> */}
                     <button className={`nav_icon ${navState ? "nav_open" : "nav_close"}`} onClick={handleNavState}>
                         <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
-                        <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
+                        <Slide top><div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div></Slide>
                         <div className={`bar ${navIconState ? 'bar-sec' : 'bar-pri'}`}></div>
                     </button>
                 </div>
-            </motion.div>
+            </div>
             <Fade bottom opposite when={showNav}>
             <div className={`${navState ? "nav-active" : "nav-inactive"}`}>
                 <div className="nav-active_wrapper">
