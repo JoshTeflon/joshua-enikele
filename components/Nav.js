@@ -20,14 +20,18 @@ const nav = {
 const Nav = (props) => {
     const [ navState, setNavState] = useState(false);
     const [ navIconState, setNavIconState] = useState(false);
+    const [ showNav, setShowNav] = useState(false);
 
     const handleNavState = () => {
-        setNavState(!navState)
+        setNavState(!navState);
+
         if (navState == false) {
             document.body.style.overflowY = "hidden"
         } else {
             document.body.style.overflowY = "scroll"
-        }
+        };
+
+        setShowNav(!showNav);
     }
 
     const handleLinkClick = () => {
@@ -71,7 +75,7 @@ const Nav = (props) => {
                     </button>
                 </div>
             </motion.div>
-            <Fade bottom>
+            <Fade bottom opposite when={showNav}>
             <div className={`${navState ? "nav-active" : "nav-inactive"}`}>
                 <div className="nav-active_wrapper">
                     <ul className="nav-active_wrapper_content">
