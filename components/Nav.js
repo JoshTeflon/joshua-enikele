@@ -51,8 +51,6 @@ const Nav = (props) => {
         }
         }, [])
 
-    console.log(navIconState)
-
     return (
         <nav className={`nav ${props.bgClass}`}>
             <div className="nav_content">

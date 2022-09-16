@@ -22,7 +22,7 @@ export default function Home() {
 		<div className="home">
 			<Head>
 				<title>Joshua Enikele | Frontend Developer</title>
-				<meta name="Joshua Enikele Portfolio" content="Joshua Enikele Portfolio, Frontend Developer, HTML, JavaScript, React, NextJS" />
+				<meta name="description" content="Joshua Enikele Portfolio, Frontend Developer, HTML, JavaScript, React, NextJS" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="main">
