@@ -51,7 +51,7 @@ const Landing = (props) => {
                                 </svg>
                             </a>
                         </div>
-                        <a className="btn download_btn" href="https://drive.google.com/file/d/1gVri2INYRUSVbtVy77iyuOcViFHCU_Jc/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a className="btn download_btn" href="https://drive.google.com/file/d/1LtW03V-1SS3ymdcPyb3XYB2VoESAxtUK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <div className="download_btn__text">Download CV</div>
                             <div className="download_btn__icon">
                                 <Image src={download} alt="download icon" />
