@@ -20,7 +20,8 @@ export const socialIcons = [
         id: 0,
         name: 'Linkedin',
         imgSrc: linkedin,
-        link: 'https://linkedin.com/in/enikele-joshua-bb0097195',
+        link: 'https://linkedin.com/in/joshua-enikele-bb0097195',
+        
     },
     {
         id: 1,
