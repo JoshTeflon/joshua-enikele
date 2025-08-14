@@ -44,14 +44,14 @@ export const socialIcons = [
 ]
 
 export const projectsData = [
-    {
-       id: 0,
-       imgSrc: avunaWeb,
-       projectStack: 'react | css',
-       projectName: 'avuna academy',
-       projectsDesc: 'A web based learning application.',
-       projectLink: 'https://avunaacademy.com',
-    },
+    // {
+    //    id: 0,
+    //    imgSrc: avunaWeb,
+    //    projectStack: 'react | css',
+    //    projectName: 'avuna academy',
+    //    projectsDesc: 'A web based learning application.',
+    //    projectLink: 'https://avunaacademy.com',
+    // },
     {
         id: 1,
         imgSrc: saedWeb,
